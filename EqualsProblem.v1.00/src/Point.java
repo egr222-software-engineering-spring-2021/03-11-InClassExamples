@@ -48,4 +48,15 @@ public class Point {
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
+
+    public boolean equals(Object o) {    // bad
+        if (o != null && getClass() == o.getClass()) {
+            Point other = (Point) o;
+            return (x == other.x && y == other.y);
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
